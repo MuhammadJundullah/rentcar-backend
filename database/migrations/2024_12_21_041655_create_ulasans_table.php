@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('judul');
             $table->string('isi');
+            $table->string('ratings');
             $table->timestamps();
         });
     }
