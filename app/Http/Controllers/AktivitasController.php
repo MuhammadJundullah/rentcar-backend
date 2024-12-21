@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Armada;
 use Illuminate\Http\Request;
+use App\Models\Aktivitas;
 
-class ArmadaController extends Controller
+class AktivitasController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Armada::all();
+        $data = Aktivitas::all();
 
         return response()->json([
             'status' => 'success',

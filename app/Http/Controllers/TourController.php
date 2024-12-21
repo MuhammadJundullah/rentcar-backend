@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Armada;
+use App\Models\Tour;
 use Illuminate\Http\Request;
 
-class ArmadaController extends Controller
+class TourController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Armada::all();
+        $data = Tour::all();
 
         return response()->json([
             'status' => 'success',

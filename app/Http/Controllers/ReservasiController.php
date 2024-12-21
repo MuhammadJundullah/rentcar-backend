@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Armada;
 use Illuminate\Http\Request;
 
-class ArmadaController extends Controller
+class ReservasiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Armada::all();
-
-        return response()->json([
-            'status' => 'success',
-            'data' => $data
-        ]);
+        //
     }
 
     /**
@@ -25,7 +19,7 @@ class ArmadaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
