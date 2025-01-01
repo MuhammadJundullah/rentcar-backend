@@ -19,6 +19,8 @@ class ReservasiResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'List Reservasi';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -26,6 +28,7 @@ class ReservasiResource extends Resource
                 Forms\Components\TextInput::make('name')->label('Nama'),
                 Forms\Components\TextInput::make('armada'),
                 Forms\Components\TextInput::make('email'),
+            Forms\Components\TextInput::make('pesan'),
                 Forms\Components\TextInput::make('nomor_telepon'),
                 Forms\Components\DatePicker::make('tanggal'),
             ]);
@@ -38,6 +41,7 @@ class ReservasiResource extends Resource
                 Tables\Columns\TextColumn::make('name')->label('Nama'),
                 Tables\Columns\TextColumn::make('armada')->label('Armada'),
                 Tables\Columns\TextColumn::make('email')->label('Email'),
+            Tables\Columns\TextColumn::make('pesan')->label('Pesan'),
                 Tables\Columns\TextColumn::make('nomor_telepon')->label('Nomor Telepon'),
                 Tables\Columns\TextColumn::make('tanggal')->label('Tanggal booking'),
             ])

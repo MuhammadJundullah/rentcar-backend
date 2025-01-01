@@ -24,14 +24,20 @@ class ArmadaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'Armada';
+
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('nama'),
-                Forms\Components\TextInput::make('kelas'),
-                Forms\Components\TextInput::make('harga')->label('Harga sewa / Hari'),
-                FileUpload::make('foto')
+            ->schema([Forms\Components\TextInput::make('nama')->required(),
+            Forms\Components\Select::make('kelas')->required()
+                ->options([
+                    'Luxury' => 'Luxury',
+                    'Standard' => 'Standard',
+                    'Economy' => 'Economy',
+                ]),
+            Forms\Components\TextInput::make('harga')->label('Harga sewa / Hari')->required(),
+            FileUpload::make('foto')->required()
                     ->directory('armada')
                     ->image()
             ]);
@@ -40,10 +46,9 @@ class ArmadaResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('nama')->label('Nama')->searchable(),
-                Tables\Columns\TextColumn::make('kelas')->label('Kelas'),
-                Tables\Columns\TextColumn::make('harga')->label('Harga'),
+            ->columns([Tables\Columns\TextColumn::make('nama')->label('Nama')->searchable()->sortable(),
+            Tables\Columns\TextColumn::make('kelas')->label('Kelas')->searchable()->sortable(),
+            Tables\Columns\TextColumn::make('harga')->label('Harga')->searchable()->sortable(),
                 ImageColumn::make('foto')
                     ->label('Foto')
                 // ->thumbnail('preview'),

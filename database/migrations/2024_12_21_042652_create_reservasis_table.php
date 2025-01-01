@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('armada');
             $table->string('email');
+            $table->string('pesan')->nullable();
             $table->string('nomor_telepon');
             $table->string('tanggal');
             $table->timestamps();

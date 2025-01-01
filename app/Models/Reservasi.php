@@ -10,6 +10,7 @@ class Reservasi extends Model
         'name',
         'armada',
         'email',
+        'pesan',
         'nomor_telepon',
         'tanggal',
         'jumlah_orang',

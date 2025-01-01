@@ -19,6 +19,8 @@ class UlasanResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'Ulasan';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -33,8 +35,7 @@ class UlasanResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('name')->label('Nama'),
+            ->columns([Tables\Columns\TextColumn::make('nama')->label('Nama'),
                 Tables\Columns\TextColumn::make('judul')->label('Judul'),
                 Tables\Columns\TextColumn::make('isi')->label('Isi'),
                 Tables\Columns\TextColumn::make('ratings')->label('Rating (bintang)'),
