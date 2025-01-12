@@ -16,6 +16,8 @@ Route::options('api/*', function () {
     return response()->json([], 200);
 });
 
+Route::post('/post/ulasan', [UlasanController::class, 'store']);
+
 Route::get('/get/armada', [ArmadaController::class, 'index']);
 
 Route::get('/get/aktivitas', [AktivitasController::class, 'index']);

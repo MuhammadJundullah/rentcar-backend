@@ -8,8 +8,15 @@
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
+        },
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/"
         }
     ],
+    "public": true,
+    "buildCommand": "vite build",
+    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_KEY": "base64:yBta2k7/9xRVAbbquAkNE7VNTpl2xPPiN7XE3kGV+6Q=",
