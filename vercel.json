@@ -12,8 +12,16 @@
     ],
     "env": {
         "APP_ENV": "production",
+        "APP_KEY": "base64:yBta2k7/9xRVAbbquAkNE7VNTpl2xPPiN7XE3kGV+6Q=",
         "APP_DEBUG": "true",
         "APP_URL": "https://yourprojectdomain.com",
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "viaduct.proxy.rlwy.net",
+        "DB_PORT": "42096",
+        "DB_DATABASE": "puzallarentcar",
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "VWrywVOIikPOjzsVqGrdRCFAxjYCSjRc",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
