@@ -1,6 +1,0 @@
-{
-    "build": {
-        "builder": "Railpack",
-        "buildCommand": "composer install --ignore-platform-req=ext-intl --ignore-platform-req=ext-zip --ignore-platform-req=ext-exif"
-    }
-}
