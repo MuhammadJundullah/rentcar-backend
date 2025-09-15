@@ -58,6 +58,8 @@ RUN php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache
 
+RUN mkdir -p /var/log/supervisord
+
 # Expose port 80
 EXPOSE 80
 
