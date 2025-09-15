@@ -61,7 +61,7 @@ RUN php artisan config:cache \
 RUN mkdir -p /var/log/supervisord /var/log/supervisor
 
 # Expose port 80
-EXPOSE 9000
+EXPOSE 80
 
 # Mulai Nginx dan PHP-FPM menggunakan supervisord
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
