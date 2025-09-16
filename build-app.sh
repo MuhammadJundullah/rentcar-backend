@@ -11,6 +11,7 @@ npm run build
 php artisan optimize:clear
 
 # Cache the various components of the Laravel application
+php artisan route:link
 php artisan config:cache
 php artisan event:cache
 php artisan route:cache
